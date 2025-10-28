@@ -1,0 +1,3 @@
+[submodule "airprint"]
+	path = airprint
+	url = git@github.com:rsperry79/homeassistant-airprint.git
