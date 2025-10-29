@@ -13,23 +13,6 @@
             "problemMatcher": []
         },
         {
-            "label": "Install Addon",
-            "type": "shell",
-            "command": "ha addons install \"local_${input:addonName}\"; ha addons start \"local_${input:addonName}\"; docker logs --follow \"addon_local_${input:addonName}\"",
-            "group": {
-                "kind": "test",
-                "isDefault": false
-            },
-            "presentation": {
-                "reveal": "always",
-                "panel": "dedicated"
-            },
-            "problemMatcher": [],
-            "runOptions": {
-                "reevaluateOnRerun": false
-            }
-        },
-        {
             "label": "Start Addon",
             "type": "shell",
             "command": "ha addons stop \"local_${input:addonName}\"; ha addons start \"local_${input:addonName}\"; docker logs --follow \"addon_local_${input:addonName}\"",
@@ -59,31 +42,13 @@
                 "panel": "dedicated"
             },
             "problemMatcher": []
-        },
-        {
-            "label": "Rebuild and Start Airprint",
-            "type": "shell",
-            "command": "ha addons rebuild \"local_airprint\"; ha addons start \"local_airprint\"; docker logs --follow \"addon_local_airprint\"",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "presentation": {
-                "reveal": "always",
-                "panel": "dedicated"
-            },
-            "problemMatcher": [],
-            "dependsOn": [
-                "Start Home Assistant"
-            ],
-            "dependsOrder": "sequence"
-        },
+        }
     ],
     "inputs": [
         {
             "id": "addonName",
             "type": "pickString",
-            "description": "Name of addon (to add your addon to this list, please edit .vscode/tasks.json)",
+            "description": "Name of addon:",
             "options": [
                 "airprint",
             ]
