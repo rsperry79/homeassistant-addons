@@ -43,10 +43,12 @@
         "lpadmin",
         "mdns",
         "mkpasswd",
+        "nameopt",
         "nofork",
         "NOPASSWD",
         "oneshot",
         "openprinting",
+        "outform",
         "pipefail",
         "ppds",
         "Printcap",
@@ -115,5 +117,32 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "path-intellisense.showHiddenFiles": true,
-    "todo-tree.filtering.includeHiddenFiles": true
+    "todo-tree.filtering.includeHiddenFiles": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true
+    },
+    "hidefiles.configurationType": "local",
+    "hidefiles.globalConfig": {
+        "profiles": [
+            {
+                "name": "Default",
+                "detail": "",
+                "description": "Test",
+                "hidden": [
+                    ".vscode/"
+                ]
+            },
+            {
+                "name": "Strict",
+                "detail": "Hide everything not immediately required",
+                "hidden": [
+                    "$Default"
+                ]
+            }
+        ]
+    }
 }

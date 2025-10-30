@@ -22,6 +22,8 @@
     "yzhang.markdown-all-in-one",
     "rogalmic.bash-debug",
     "mads-hartmann.bash-ide-vscode",
-    "redhat.vscode-yaml"
+    "redhat.vscode-yaml",
+    "jeremyfunk.hidefiles",
+    "keesschollaart.vscode-home-assistant"
   ]
 }
